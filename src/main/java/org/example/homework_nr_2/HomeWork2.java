@@ -70,4 +70,8 @@ public class HomeWork2 {
             s = s+z;
             System.out.println(s);
         }
+        }
+    }
+
 }
+
