@@ -6,6 +6,7 @@ public class HomeWork4 {
         int[] array = new int[] {0, 1, 2, 3, 4, 5};
         for (int index = 0; index != array.length; index++)
             System.out.print(array[index]);
+
         int sum = 0;
         for (int x = 0; x != array.length; x++)
             sum += array[x];

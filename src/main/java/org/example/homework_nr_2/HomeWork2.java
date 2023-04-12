@@ -2,7 +2,7 @@ package org.example.homework_nr_2;
 
 public class HomeWork2 {
     public static void main(String[] args) {
-        String month = "12";
+        String month = "5";
         switch (month) {
             case "1":
                 System.out.println("1 -> January");
@@ -70,5 +70,5 @@ public class HomeWork2 {
             s = s+z;
             System.out.println(s);
         }
-        }
     }
+}
