@@ -4,47 +4,17 @@ import java.time.Month;
 
 public class HomeWork5 {
     public static void main(String[] args) {
-        Month[] months = Month.values();
         int i;
-        for (i = 0; i != Month.values().length; i++)
-            System.out.println(Month.values()[i]);
-        enum Month {
-            JANUARY,
-            FEBRUARY,
-            MARCH,
-            APRIL,
-            MAY,
-            JUNE,
-            JULY,
-            AUGUST,
-            SEPTEMBER,
-            OCTOBER,
-            NOVEMBER,
-            DECEMBER
-        }
+        for (i = 0; i != java.time.Month.values().length; i++)
+            System.out.println(java.time.Month.values()[i]);
 
-        System.out.println("----------------------------------");
-        enum WeekDay {
-            MONDAY,
-            TUESDAY,
-            WEDNESDAY,
-            THURSDAY,
-            FRIDAY,
-            SATURDAY,
-            SUNDAY;
+        System.out.println("-----------------------------------");
 
-            public boolean isWeekDay(){
-                return this != SATURDAY && this != SUNDAY;
-            }
-            public boolean isHoliday(){
-                return !isWeekDay();
-            }
-        }
         System.out.println(WeekDay.SUNDAY.isWeekDay()); //false
         System.out.println(WeekDay.SUNDAY.isHoliday()); //true
         System.out.println(WeekDay.MONDAY.isHoliday()); //false
 
-        System.out.println("-------------------------------");
+        System.out.println("-----------------------------------");
 
         boolean boolVar = Boolean.parseBoolean("true");
         byte byteVar = Byte.parseByte("120");
@@ -61,5 +31,35 @@ public class HomeWork5 {
         System.out.println("longVar = " + longVar);
         System.out.println("doubleVar = " + doubleVar);
         System.out.println("floatVar = " + floatVar);
+
+    }
+    enum Month {
+        JANUARY,
+        FEBRUARY,
+        MARCH,
+        APRIL,
+        MAY,
+        JUNE,
+        JULY,
+        AUGUST,
+        SEPTEMBER,
+        OCTOBER,
+        NOVEMBER,
+        DECEMBER
+    }
+    enum WeekDay {
+        MONDAY,
+        TUESDAY,
+        WEDNESDAY,
+        THURSDAY,
+        FRIDAY,
+        SATURDAY,
+        SUNDAY;
+    public boolean isWeekDay(){
+        return this != SATURDAY && this  != SUNDAY;
+    }
+    public boolean isHoliday(){
+        return !isWeekDay();
+        }
     }
 }
