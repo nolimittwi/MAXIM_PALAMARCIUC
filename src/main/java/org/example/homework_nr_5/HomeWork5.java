@@ -3,43 +3,38 @@ package org.example.homework_nr_5;
 import java.time.Month;
 
 public class HomeWork5 {
+    enum Month {
+        JANUARY,
+        FEBRUARY,
+        MARCH,
+        APRIL,
+        MAY,
+        JUNE,
+        JULY,
+        AUGUST,
+        SEPTEMBER,
+        OCTOBER,
+        NOVEMBER,
+        DECEMBER
+    }
+    enum WeekDay {
+        MONDAY,
+        TUESDAY,
+        WEDNESDAY,
+        THURSDAY,
+        FRIDAY,
+        SATURDAY,
+        SUNDAY;
+
+        public boolean isWeekDay(){
+            return this != SATURDAY && this != SUNDAY;
+        }
+        public boolean isHoliday(){
+            return !isWeekDay();
+        }
+    }
     public static void main(String[] args) {
-        Month[] months = Month.values();
-        int i;
-        for (i = 0; i != Month.values().length; i++)
-            System.out.println(Month.values()[i]);
-        enum Month {
-            JANUARY,
-            FEBRUARY,
-            MARCH,
-            APRIL,
-            MAY,
-            JUNE,
-            JULY,
-            AUGUST,
-            SEPTEMBER,
-            OCTOBER,
-            NOVEMBER,
-            DECEMBER
-        }
 
-        System.out.println("----------------------------------");
-        enum WeekDay {
-            MONDAY,
-            TUESDAY,
-            WEDNESDAY,
-            THURSDAY,
-            FRIDAY,
-            SATURDAY,
-            SUNDAY;
-
-            public boolean isWeekDay(){
-                return this != SATURDAY && this != SUNDAY;
-            }
-            public boolean isHoliday(){
-                return !isWeekDay();
-            }
-        }
         System.out.println(WeekDay.SUNDAY.isWeekDay()); //false
         System.out.println(WeekDay.SUNDAY.isHoliday()); //true
         System.out.println(WeekDay.MONDAY.isHoliday()); //false
