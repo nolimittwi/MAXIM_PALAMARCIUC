@@ -55,7 +55,7 @@ public class Main {
             }
             return count;
         };
-        String input3 = "GeraGei 1 2 3";
+        String input3 = "GeraTop 1 2 3";
         int countNumbers = getNumberCount.apply(input3);
         System.out.println("Number Count = " + countNumbers);
 
